@@ -101,6 +101,15 @@ export default {
 				noCache: true
 			}
 		},
+        // 自建数据1 系统学习滑轨动画
+        {
+			path: 'three01_donghuachangjiang',
+			component: () => import('@/examples/three/three01_donghuachangjiang.vue'),
+			hidden: true,
+			meta: {
+				noCache: true
+			}
+		},
 	]
 };
 
