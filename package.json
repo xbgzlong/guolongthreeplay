@@ -1,0 +1,79 @@
+{
+  "name": "management_system",
+  "version": "3.8.6",
+  "description": "冠迅研发THREE",
+  "author": "mumu",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vue-cli-service serve",
+    "build:dev": "vue-cli-service build --mode development",
+    "build:prod": "vue-cli-service build --mode production",
+    "build:stage": "vue-cli-service build --mode staging",
+    "preview": "node build/index.js --preview",
+    "lint": "eslint --ext .js,.vue src"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,vue}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "keywords": [
+    "vue",
+    "element-ui"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/y_project/base-Vue.git"
+  },
+  "dependencies": {
+    "axios": "0.24.0",
+    "core-js": "^3.37.1",
+    "d3": "^7.8.5",
+    "element-ui": "2.15.13",
+    "gsap": "^3.12.2",
+    "js-cookie": "3.0.1",
+    "jsencrypt": "3.0.0-rc.1",
+    "marked": "^7.0.1",
+    "nprogress": "0.2.0",
+    "particles.js": "^2.0.0",
+    "screenfull": "5.0.2",
+    "sortablejs": "1.10.2",
+    "three": "^0.155.0",
+    "vue": "2.6.12",
+    "vue-router": "3.4.9",
+    "vuex": "3.6.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "4.4.6",
+    "@vue/cli-plugin-eslint": "4.4.6",
+    "@vue/cli-service": "4.4.6",
+    "babel-eslint": "10.1.0",
+    "babel-plugin-dynamic-import-node": "2.3.3",
+    "chalk": "4.1.0",
+    "compression-webpack-plugin": "5.0.2",
+    "connect": "3.6.6",
+    "eslint": "7.15.0",
+    "eslint-plugin-vue": "7.2.0",
+    "lint-staged": "10.5.3",
+    "runjs": "4.4.2",
+    "sass": "1.32.13",
+    "sass-loader": "10.1.1",
+    "script-ext-html-webpack-plugin": "2.1.5",
+    "svg-sprite-loader": "5.1.1",
+    "vue-template-compiler": "2.6.12"
+  },
+  "engines": {
+    "node": ">=8.9",
+    "npm": ">= 3.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}

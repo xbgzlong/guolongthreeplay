@@ -1,0 +1,259 @@
+#app {
+	.markdown-body {
+		background-color: #fff0;
+	}
+
+	table {
+		width: 100%;
+	}
+
+	/* 代码块高亮样式 */
+	.markdown-body .highlight pre,
+	.markdown-body pre {
+		/* 代码块背景色改变默认 */
+		background-color: rgb(34, 34, 34);
+		/* 代码括号颜色 */
+		color: #378dcc;
+	}
+
+	.markdown-body pre code {
+		color: #ffffffd6;
+	}
+
+	.language-xml {
+		color: #fff;
+	}
+
+	pre code.hljs {
+		display: block;
+		overflow-x: auto;
+		padding: 1em;
+	}
+
+	code.hljs {
+		padding: 3px 5px;
+	}
+
+	.hljs {
+		color: #eaeaea;
+		background: #000;
+	}
+
+	.hljs-subst {
+		color: #eaeaea;
+	}
+
+	.hljs-emphasis {
+		font-style: italic;
+	}
+
+	.hljs-strong {
+		font-weight: 700;
+	}
+
+	.hljs-type {
+		color: #eaeaea;
+	}
+
+	/* 参数 */
+	.hljs-params {
+		color: #9cdcfe;
+	}
+
+	/* true颜色 */
+	.hljs-literal,
+	.hljs-name,
+	.hljs-number {
+		color: #378dcc;
+		font-weight: bolder;
+	}
+
+	/* 注释颜色 */
+	.hljs-comment {
+		color: #6a9955;
+	}
+
+	.language-scss {
+		color: #d2d187;
+	}
+
+	.hljs-number {
+		color: #b5ce9d;
+	}
+
+	.hljs-quote,
+	.hljs-selector-id {
+		color: #0ff;
+	}
+
+	/* 函数颜色 */
+	.hljs-template-variable,
+	.hljs-title,
+	.hljs-variable {
+		color: #c3bf7b;
+		font-weight: 700;
+	}
+
+	/* 对象颜色 */
+	.hljs-keyword,
+	.hljs-selector-class,
+	.hljs-symbol {
+		color: #d79d5a;
+	}
+
+	/* 值的颜色 */
+	.hljs-bullet,
+	.hljs-string {
+		color: #ce834a;
+	}
+
+	.hljs-section,
+	.hljs-tag {
+		color: #6a9955;
+	}
+
+	.hljs-tag .hljs-attr {
+		color: #9cdcfe;
+	}
+
+	.language-javascript {
+		color: #1b8fdb;
+	}
+
+	.language-javascript .hljs-attr {
+		color: #9cdcfe;
+	}
+
+	.hljs-selector-tag {
+		color: #1b8fdb;
+		font-weight: 700;
+	}
+
+	.hljs-attribute,
+	.hljs-built_in,
+	.hljs-link,
+	.hljs-regexp {
+		color: #378dcc;
+	}
+
+	.hljs-attribute {
+		color: #9cdcfe;
+	}
+
+	.hljs-meta {
+		color: #fff;
+		font-weight: bolder;
+	}
+
+}
+
+
+.md-siber {
+	overflow: hidden;
+	height: auto;
+
+	.toc {
+		position: fixed;
+		right: 5%;
+		top: 180px;
+		/* bottom: 80px; */
+		width: 300px;
+		min-width: 300px;
+		overflow: auto;
+		background: #fff;
+		border-radius: 10px;
+		max-height: calc(100% - 300px);
+		/* min-height: 320px; */
+		/* height: 410px; */
+		/* height: auto; */
+		padding: 15px;
+		transition: all 1s;
+	}
+
+	.tocScroll {
+		top: 60px;
+	}
+
+	.dir {
+		position: relative;
+		padding-bottom: 8px;
+		box-sizing: border-box;
+	}
+
+	#toc {
+		margin: 0;
+		padding-left: 0;
+		box-sizing: border-box;
+	}
+
+	.sider {
+		width: 2px;
+		height: 100%;
+		background: #eee;
+		position: absolute;
+		right: 0;
+		top: 0;
+		border-radius: 10px;
+		margin: auto;
+		bottom: 0;
+	}
+
+	.siderbar {
+		display: flex;
+		width: 100%;
+		height: 20px;
+		line-height: 2;
+		background: orange;
+		transition: all 0.1s;
+	}
+
+
+	li {
+		height: 30px;
+		box-sizing: border-box;
+		list-style: none;
+	}
+
+	a {
+		color: #333c;
+		text-decoration: none;
+		font-size: 16px;
+		font-weight: 500;
+		padding: 5px;
+		background: #ffffff00;
+		transition: all .5s;
+		border-radius: 5px;
+	}
+
+	a.md-active {
+		color: orange;
+		/* font-size: 18px; */
+		/* font-weight: 800; */
+		background: #fff;
+	}
+
+	.li-1 {
+		padding-left: 0px;
+	}
+
+	.li-2 {
+		padding-left: 8px;
+	}
+
+	.li-3 {
+		padding-left: 16px;
+	}
+
+	.li-4 {
+		padding-left: 24px;
+	}
+
+	.li-5 {
+		padding-left: 32px;
+	}
+
+	.li-6 {
+		padding-left: 40px;
+	}
+
+}
