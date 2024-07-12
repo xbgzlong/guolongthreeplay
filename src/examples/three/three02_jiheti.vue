@@ -113,10 +113,42 @@ export default {
 		},
         // 设计几何体
         setCube(){
-            this.boxGeometry = new THREE.BoxGeometry(1,1,1);
+            // 按照顶点 制作一个正方形
+            this.boxGeometry = new THREE.BufferGeometry();
+            let vertices = new Float32Array([
+                1.0,1.0,1.0, 
+                1.0,-1.0,1.0,
+                1.0,1.0,-1.0, 
+                1.0,-1.0,-1.0,
+                1.0,1.0,-1.0,
+                1.0,-1.0,1.0,
+            ])
+            this.boxGeometry.setAttribute('position',new THREE.BufferAttribute(vertices,3))
             let material = new THREE.MeshBasicMaterial({color:0xffff00});
             this.cube = new THREE.Mesh(this.boxGeometry,material);
             this.scene.add(this.cube);
+            for(let i=0;i<50;i++){
+                // 创建一个顶点几何体
+                const gg = new THREE.BufferGeometry();
+                // 生成一个9个元素的数组
+                const arr = new Float32Array(9)
+                for(let j=0;j<9;j++){
+                    // 给每个数组赋值
+                    arr[j] = Math.random()*5;
+                }
+                // 给几何体顶点赋值
+                gg.setAttribute('position',new THREE.BufferAttribute(arr,3))
+                // 创建一个颜色对象
+                let color = new THREE.Color(Math.random(),Math.random(),Math.random());
+                // 创建一个颜色材质
+                let material = new THREE.MeshBasicMaterial({color:color,transparent:true,opacity:Math.random()});
+                // 添加物体
+                let cube = new THREE.Mesh(gg,material);
+                gsap.to(cube.position,{x:Math.random()*5,y:Math.random()*5,z:Math.random()*5,duration:5,ease:'power1.inOut',repeat:-1,yoyo:true,delay:2,onComplete:function(){}});
+                // 加入场景
+                this.scene.add(cube);
+            }
+            
         },
         // 盒子点击事件
         containerClick(){

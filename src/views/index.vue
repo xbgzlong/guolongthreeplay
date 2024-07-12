@@ -109,6 +109,14 @@ export default {
 					path: "/three/three01_donghuachangjiang",
 					img: "webgl_camera.jpg",
 				},
+                {
+					title: "three几何体进阶",
+					date: "2023-09-21 11:10:00",
+					description: ['animation/three02_jiheti'],
+					tag: "three",
+					path: "/three/three02_jiheti",
+					img: "webgl_camera.jpg",
+				},
 
 
 

@@ -110,6 +110,14 @@ export default {
 				noCache: true
 			}
 		},
+        {
+			path: 'three02_jiheti',
+			component: () => import('@/examples/three/three02_jiheti.vue'),
+			hidden: true,
+			meta: {
+				noCache: true
+			}
+		},
 	]
 };
 
