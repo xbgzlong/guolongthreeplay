@@ -127,14 +127,28 @@ export default {
             let material = new THREE.MeshBasicMaterial({color:0xffff00});
             this.cube = new THREE.Mesh(this.boxGeometry,material);
             this.scene.add(this.cube);
+            // 立方体
+            const BoxGeometry = new THREE.BoxGeometry( 1, 1, 1, 2, 3, 4 ); 
+            const BoxGeometrycube = new THREE.Mesh( BoxGeometry, new THREE.MeshBasicMaterial( {color: 0xffff00,wireframe:true} ) ); 
+            BoxGeometrycube.position.set(0,5,0);
+            this.scene.add( BoxGeometrycube );
+            // 胶囊
+            const CapsuleGeometry = new THREE.CapsuleGeometry( 1, 1, 4, 8 ); 
+            const capsule = new THREE.Mesh( CapsuleGeometry, new THREE.MeshBasicMaterial( {color: 0x00ff00,wireframe:true} ) ); 
+            capsule.position.set(0,7,0);
+            this.scene.add( capsule );
+
+
+
+            // 制作三角形矩阵
             for(let i=0;i<50;i++){
                 // 创建一个顶点几何体
                 const gg = new THREE.BufferGeometry();
                 // 生成一个9个元素的数组
                 const arr = new Float32Array(9)
                 for(let j=0;j<9;j++){
-                    // 给每个数组赋值
-                    arr[j] = Math.random()*5;
+                    // 给每个数组赋值 -2.5 可以产生负值
+                    arr[j] = Math.random()*5 - 2.5;
                 }
                 // 给几何体顶点赋值
                 gg.setAttribute('position',new THREE.BufferAttribute(arr,3))
@@ -144,7 +158,8 @@ export default {
                 let material = new THREE.MeshBasicMaterial({color:color,transparent:true,opacity:Math.random()});
                 // 添加物体
                 let cube = new THREE.Mesh(gg,material);
-                gsap.to(cube.position,{x:Math.random()*5,y:Math.random()*5,z:Math.random()*5,duration:5,ease:'power1.inOut',repeat:-1,yoyo:true,delay:2,onComplete:function(){}});
+                // 
+                gsap.to(cube.position,{x:Math.random()*7 - 3.5,y:Math.random()*7-  3.5,z:Math.random()* - 3.5,duration:5,ease:'power1.inOut',repeat:-1,yoyo:true,delay:2,onComplete:function(){}});
                 // 加入场景
                 this.scene.add(cube);
             }

@@ -13,8 +13,8 @@
 				</div>
 			</div>
 			<div class="title">
-				<span class="fs-26 p-tb-15 fw-800">化腐朽为神奇</span>
-				<span class="fs-20 p-tb-15">这里是threePlay</span>
+				<!-- <span class="fs-26 p-tb-15 fw-800">化腐朽为神奇</span> -->
+				<span class="fs-20 p-tb-15" style="color: darkorange;">threePlay</span>
 			</div>
 		</div>
 		<div class="BasicCase">
@@ -117,7 +117,63 @@ export default {
 					path: "/three/three02_jiheti",
 					img: "webgl_camera.jpg",
 				},
-
+                {
+					title: "three材质和纹理",
+					date: "2023-09-21 11:10:00",
+					description: ['animation/three03_caizhi'],
+					tag: "three",
+					path: "/three/three03_caizhi",
+					img: "webgl_camera.jpg",
+				},
+                {
+					title: "three光线渲染",
+					date: "2023-09-21 11:10:00",
+					description: ['animation/three04_guang'],
+					tag: "three",
+					path: "/three/three04_guang",
+					img: "webgl_camera.jpg",
+				},
+                {
+					title: "three粒子特效",
+					date: "2023-09-21 11:10:00",
+					description: ['animation/three05_lizitexiao'],
+					tag: "three",
+					path: "/three/three05_lizitexiao",
+					img: "webgl_camera.jpg",
+				},
+                {
+					title: "three星河",
+					date: "2023-09-21 11:10:00",
+					description: ['animation/three06_xinghetexiao'],
+					tag: "three",
+					path: "/three/three06_xinghetexiao",
+					img: "webgl_camera.jpg",
+				},
+                {
+					title: "three下雪",
+					date: "2023-09-21 11:10:00",
+					description: ['animation/three07_xuehuatexiao'],
+					tag: "three",
+					path: "/three/three07_xuehuatexiao",
+					img: "webgl_camera.jpg",
+				},
+                {
+					title: "three星云",
+					date: "2023-09-21 11:10:00",
+					description: ['animation/three08_xingyuntexiao'],
+					tag: "three",
+					path: "/three/three08_xingyuntexiao",
+					img: "webgl_camera.jpg",
+				},
+                {
+					title: "three3D交互",
+					date: "2023-09-21 11:10:00",
+					description: ['animation/three09_3djiaohu'],
+					tag: "three",
+					path: "/three/three09_3djiaohu",
+					img: "webgl_camera.jpg",
+				},
+                
 
 
 
@@ -177,7 +233,7 @@ export default {
 <style lang="scss" scoped>
 .home-page {
 	.water-background {
-		height: 300px;
+		height: 150px;
 		position: relative;
 		// ========================水波纹=============================
 
@@ -221,7 +277,7 @@ export default {
 			background-repeat: repeat no-repeat;
 			background-position: 0 bottom;
 			background-size: 100% 100%;
-			background-image: url("../assets/images/LearningDocument.jpg");
+			// background-image: url("../assets/images/LearningDocument.jpg");
 		}
 
 		.bgTop {

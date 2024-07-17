@@ -118,6 +118,64 @@ export default {
 				noCache: true
 			}
 		},
+        {
+			path: 'three03_caizhi',
+			component: () => import('@/examples/three/three03_caizhi.vue'),
+			hidden: true,
+			meta: {
+				noCache: true
+			}
+		},
+        {
+			path: 'three04_guang',
+			component: () => import('@/examples/three/three04_guang.vue'),
+			hidden: true,
+			meta: {
+				noCache: true
+			}
+		},
+        {
+			path: 'three05_lizitexiao',
+			component: () => import('@/examples/three/three05_lizitexiao.vue'),
+			hidden: true,
+			meta: {
+				noCache: true
+			}
+		},
+        {
+			path: 'three06_xinghetexiao',
+			component: () => import('@/examples/three/three06_xinghetexiao.vue'),
+			hidden: true,
+			meta: {
+				noCache: true
+			}
+		},
+        {
+			path: 'three07_xuehuatexiao',
+			component: () => import('@/examples/three/three07_xuehuatexiao.vue'),
+			hidden: true,
+			meta: {
+				noCache: true
+			}
+		},
+        {
+			path: 'three08_xingyuntexiao',
+			component: () => import('@/examples/three/three08_xingyuntexiao.vue'),
+			hidden: true,
+			meta: {
+				noCache: true
+			}
+		},
+        {
+			path: 'three09_3djiaohu',
+			component: () => import('@/examples/three/three09_3djiaohu.vue'),
+			hidden: true,
+			meta: {
+				noCache: true
+			}
+		},
+        
+        
 	]
 };
 
