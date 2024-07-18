@@ -1,7 +1,6 @@
 # git提交时忽略的文件
 .DS_Store
 node_modules/
-# dist/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
