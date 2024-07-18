@@ -105,7 +105,7 @@ export default {
 			// 第二参数就是 长度和宽度比 默认采用浏览器  返回以像素为单位的窗口的内部宽度和高度
 			this.camera = new THREE.PerspectiveCamera(75, this.container.clientWidth / this.container.clientHeight, 0.1, 100)
 			// 设置相机位置
-			this.camera.position.set(0, 10, 0)
+			this.camera.position.set(0, 15, 0)
 			// 设置摄像头宽高比例
 			// this.camera.aspect = this.container.clientWidth / this.container.clientHeight;
 			// 设置摄像头投影矩阵
@@ -123,7 +123,7 @@ export default {
             const mappic = TextureLoader.load(require('../../assets/images/xingxing.png'));
             // 参数
             const params = {
-                count : 100,
+                count : 10,
                 size:0.1,
                 radius:7,//半径
                 branch:6,//分支数量
@@ -196,6 +196,39 @@ export default {
             this.scene.add(this.cube);
             const light = new THREE.AmbientLight( 0xffffff ); // 柔和的白光
             this.scene.add( light );
+            // 实现一个 立方体集合
+            let box = new THREE.BoxGeometry(1,1,1);
+            let boxMaterial = new THREE.MeshBasicMaterial({
+                wireframe:true
+            });
+            let redboxMaterial = new THREE.MeshBasicMaterial({
+                // wireframe:true,
+                color:"#ffff00"
+            });
+            let cubeARR= [];
+            for(let i = -3;i<3;i++){
+                for(let j = -3;j<3;j++){
+                    for(let k = -3;k<3;k++){
+                        let cube = new THREE.Mesh(box,boxMaterial)
+                        cube.position.set(i,j,k)
+                        this.scene.add(cube);
+                        cubeARR.push(cube)
+                    }
+                }
+            }
+            let mouse = new THREE.Vector2();
+            // 投射光对象
+            let raycaster = new THREE.Raycaster();
+            window.addEventListener('click',(event)=>{
+                mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+                mouse.y = -((event.clientY / window.innerHeight) * 2 - 1);
+                // 学习raycaster对象吧
+                raycaster.setFromCamera(mouse, this.camera);
+                let result = raycaster.intersectObjects(cubeARR);
+                console.log(result)
+                // result[0].object.material = redboxMaterial
+                result.forEach((item) =>{item.object.material = redboxMaterial});
+            })
            
 
         },
